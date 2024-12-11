@@ -1,0 +1,573 @@
+/* General Reset */
+/* Import Font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+   
+    line-height: 1.6;
+    color: #fffcfc;
+    background: linear-gradient(135deg, #210435 30%, #020254 50%, #051c34 80%); /* Professional Purple & Blue gradient mix */
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+header {
+    background-color: #070d2c; 
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    justify-content: space-betweenspace-around;
+    align-items: center;
+    border-bottom: 1px solid #f9fafb; 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 50px;
+
+}
+
+.logo-image {
+    width: 100px; 
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 40px;
+    margin-left: 700px;
+}
+
+.social-links a {
+    margin-right: 18px;
+    text-decoration: none;
+    color: #f8f0f0;
+    font-size: 1.8rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+
+}
+
+.social-links a:hover {
+    color: #300e37; 
+    transform: scale(1.2); 
+}
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 0;
+    background: linear-gradient(135deg, #210435 30%, #020254 50%, #051c34 80%); /* Professional Purple & Blue gradient mix */
+    color: #fff;
+}
+
+.hero-content {
+    max-width: 50%;
+    animation: fadeIn 1s ease-in-out;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+.hero h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 4rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    text-align: center; /* Center the heading */
+    animation: colorChange 3s ease-in-out infinite; /* Add color change animation */
+
+}
+/* Define the color change animation */
+@keyframes colorChange {
+    0% {
+        color: #ffffff; /* Start with white */
+    }
+    25% {
+        color: #f533ff; /* Change to a different color */
+    }
+    50% {
+        color: #05103d; /* Change to another color */
+    }
+    75% {
+        color: #031047; /* Change to another color */
+    }
+    100% {
+        color: #ffffff; /* Return to white */
+    }
+}
+
+/* Change font for the paragraph */
+.hero p {
+    font-family: 'Arial', sans-serif; /* Change to Arial font */
+    font-size: 1.5rem; /* Increase font size */
+    margin-bottom: 25px; /* Increase margin */
+    color: #ffffff; /* Change text color to white */
+    text-align: center; /* Center the paragraph */
+    line-height: 1.6; /* Increase line height for better readability */
+    font-style: oblique;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+    
+}
+
+.btn {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: #0077b5;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+.profile-img {
+    width: 260px;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    margin: 20px auto;
+    object-fit: cover;
+    border: 5px solid #fff;
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* About Section */
+#about {
+    padding: 50px 0;
+    background-color: #f4f4f9;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-text {
+    width: 50%;
+    animation: fadeInLeft 1.5s ease-in-out;
+}
+
+.about-text h2 {
+    font-size: 3rem;
+    color: #4b0082;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
+animation: slideLeft 1s ease-in-out, auto 1s ease-in-out;
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+}
+.about-images {
+    display: flex;
+    flex-direction: row; /* Images are now horizontal */
+    gap: 20px;
+    width: 40%;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-img {
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    animation: slide 4s infinite ease-in-out;
+}
+
+.about-img:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.about-img:nth-child(2) {
+    animation-delay: 1s;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Projects Section Styling */
+#projects {
+    padding: 60px 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+#projects h2 {
+    position: relative;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #690b9c;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+#projects h2::after {
+    content: ''; /* Required for the pseudo-element */
+    position: absolute; /* Position it absolutely */
+    left: 0; /* Align to the left */
+    bottom: 0; /* Position at the bottom of the h2 */
+    width: 100%; /* Full width */
+    height: 2px; /* Height of the underline */
+    background: #333; /* Color of the underline */
+    transform: scaleX(0); /* Start with no width */
+    transition: transform 0.3s ease; /* Animation for the scaling */
+}
+
+#projects h2:hover::after {
+    transform: scaleX(1); /* Scale to full width on hover */
+}
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+
+.project-item {
+    position: relative;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    height: 250px; /* Set a fixed height for consistency */
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.project-item-background {
+    background-color: #0077b5;
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.1;
+}
+
+.project-item h3 {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.project-item p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+.project-item a {
+    text-decoration: none;
+    color: #0077b5;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #0077b5;
+    border-radius: 30px;
+    z-index: 1;
+}
+
+.project-item a:hover {
+    color: #fff;
+    background-color: #0077b5;
+    transform: scale(1.1);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    #projects h2 {
+        font-size: 2rem;
+    }
+
+    .project-item h3 {
+        font-size: 1.4rem;
+    }
+
+    .project-item p {
+        font-size: 1rem;
+    }
+
+    .project-item a {
+        font-size: 1.1rem;
+    }
+}
+
+/* Skills Section Styling */
+#skills {
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Space between icons */
+}
+
+.skill-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.skill-icon:hover {
+    transform: scale(1.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skill-icon i {
+    font-size: 2.5rem;
+    transition: color 0.3s ease;
+}
+
+/* Specific Icon Colors */
+.skill-icon i.fab.fa-html5 {
+    color: #e34c26; /* HTML: Orange */
+}
+
+.skill-icon i.fab.fa-css3-alt {
+    color: #264de4; /* CSS: Blue */
+}
+
+.skill-icon i.fab.fa-js {
+    color: #f0db4f; /* JavaScript: Yellow */
+}
+
+.skill-icon i.fas.fa-database {
+    color: #4caf50; /* SQL: Green */
+}
+
+.skill-icon i.fas.fa-file-excel {
+    color: #217346; /* Excel: Green */
+}
+
+/* Power BI Icon Styling */
+.skill-icon img {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+    background-color: #f2c811; /* Power BI: Yellow */
+    border-radius: 50%;
+    padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skills-container {
+        flex-wrap: wrap; /* Stack icons if space is limited */
+        gap: 20px;
+    }
+
+    .skill-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .skill-icon i {
+        font-size: 2rem;
+    }
+}
+
+/* Chat Widget Styles */
+.chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.chat-button {
+    background-color: #0077b5;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.chat-button:hover {
+    transform: scale(1.1);
+}
+
+.chat-box {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 300px;
+    background: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-header {
+    background-color: #0077b5;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.close-chat {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.chat-messages {
+    padding: 15px;
+    flex-grow: 1;
+    overflow-y: auto;
+    background-color: #f5f5f5;
+    height: 200px;
+}
+
+.chat-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+    flex-grow: 1;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    outline: none;
+}
+
+.chat-input button {
+    background-color: #0077b5;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}

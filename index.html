@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<!-- Header Section -->
+<header>
+    <div class="container">
+        <!-- Logo Section (Left Side) -->
+        <div class="logo-container">
+            <img src="LOGO VIDU.png" alt="My Logo" class="logo-image" />
+            
+        <!-- Social Media Links (Right Side) -->
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/vidumini-layang" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.instagram.com/yourprofile" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/yourprofile" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook"></i>
+            </a>
+        </div>
+</header>
+
+<body>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Vidumini Layangika</h1>
+            <p>Web Developer & Data Analyst </p>
+            <p> passionate Data Analyst and Web Developer specializing in transforming ideas into actionable insights and beautiful, functional websites.</p>
+           <div class="button-container">
+          <a href="cv vidumini.pdf" class="btn" download>Download My CV</a> <!-- Added Download CV button -->
+        </div>
+        </div>
+        <img src="images/MREE.jpg" alt="My Profile Picture" class="profile-img">
+    </section>
+
+    <section id="about">
+    <div class="container">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>As a dedicated Data Analyst and Web Developer with a strong foundation in Information Systems Engineering, I excel in creating dynamic dashboards using Power BI and crafting modern, responsive websites with HTML, CSS, and JavaScript. With experience in delivering impactful projects, including corporate and finance websites, I strive to combine technical skills with creativity to develop efficient and user-friendly solutions. My passion for continuous learning drives me to stay updated with the latest trends in data analysis and web development.</p>
+            </div>
+            <div class="about-images">
+                <img src="images/powerbi.png" alt="About Image 1" class="about-img">
+                <img src="images/webdeveloper.png" alt="About Image 2" class="about-img">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Projects Section -->
+<section id="projects">
+    <div class="container">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <div class="project-item">
+                <h3>BC Agro Website</h3>
+                <p>A corporate website showcasing products and services for BC Agro Pvt. Ltd.</p>
+                <a href="https://viduminiyapa.github.io/BCAGRO/" target="_blank">View Project</a>
+            </div>
+            <div class="project-item">
+                <h3>Blackpool Website</h3>
+                <p>A modern website featuring animated designs for a finance company.</p>
+                <a href="https://blackpool-capital.com/" target="_blank">View Project</a>
+            </div>
+            <div class="project-item" >
+                <h3>Power BI Dashboard</h3>
+                <p>Created an interactive Power BI dashboard to visualize and analyze real-time data for BC Agro.</p>
+                <a href="https://example-link-to-dashboard.com" target="_blank">View Project</a> <!-- Replace with actual link -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="skills">
+    <div class="skills-container">
+        <div class="skill-icon">
+            <i class="fab fa-html5"></i>
+        </div>
+        <div class="skill-icon">
+            <i class="fab fa-css3-alt"></i>
+        </div>
+        <div class="skill-icon">
+            <i class="fab fa-js"></i>
+        </div>
+        <div class="skill-icon">
+            <i class="fas fa-database"></i>
+        </div>
+        <div class="skill-icon">
+            <img src="images/powerbi-icon.png" alt="Power BI">
+        </div>
+        <div class="skill-icon">
+            <i class="fas fa-file-excel"></i>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<!-- Online Chat Section -->
+<div class="chat-widget">
+    <button id="chat-button" class="chat-button">
+        <i class="fas fa-comments"></i>
+    </button>
+    <div id="chat-box" class="chat-box">
+        <div class="chat-header">
+            <h3>Online Chat</h3>
+            <button id="close-chat" class="close-chat">&times;</button>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <!-- Chat messages will appear here -->
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chat-input" placeholder="Type your message..." />
+            <button id="send-message" class="send-message">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+</div>
+<script>
+    // Include the JavaScript from below
+    // Toggle chat box visibility
+const chatButton = document.getElementById('chat-button');
+const chatBox = document.getElementById('chat-box');
+const closeChat = document.getElementById('close-chat');
+
+chatButton.addEventListener('click', () => {
+    chatBox.style.display = chatBox.style.display === 'none' || chatBox.style.display === '' ? 'flex' : 'none';
+});
+
+closeChat.addEventListener('click', () => {
+    chatBox.style.display = 'none';
+});
+
+// Handle sending messages
+const chatInput = document.getElementById('chat-input');
+const chatMessages = document.getElementById('chat-messages');
+const sendMessage = document.getElementById('send-message');
+
+sendMessage.addEventListener('click', () => {
+    const message = chatInput.value.trim();
+    if (message) {
+        const messageElement = document.createElement('div');
+        messageElement.textContent = message;
+        messageElement.style.background = "#0077b5";
+        messageElement.style.color = "#fff";
+        messageElement.style.margin = "5px 0";
+        messageElement.style.padding = "8px 12px";
+        messageElement.style.borderRadius = "8px";
+        messageElement.style.alignSelf = "flex-end";
+        chatMessages.appendChild(messageElement);
+        chatInput.value = '';
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+});
+
+// Optional: Send message on pressing Enter
+chatInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        sendMessage.click();
+    }
+});
+
+</script>
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Vidumini Layangika Yapa. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></Script>
+</body>
+</html>
